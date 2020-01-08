@@ -5,41 +5,19 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "lldb",
+            "name": "(Windows) Build+Launch",
+            "type": "cppvsdbg",
             "request": "launch",
-            "name": "Debug executable 'Rust_game'",
-            "cargo": {
-                "args": [
-                    "build",
-                    "--bin=Rust_game",
-                    "--package=Rust_game"
-                ],
-                "filter": {
-                    "name": "Rust_game",
-                    "kind": "bin"
-                }
-            },
+            "program": "${workspaceFolder}/target/debug/Rust_game.exe",
             "args": [],
-            "cwd": "${workspaceFolder}"
-        },
-        {
-            "type": "lldb",
-            "request": "launch",
-            "name": "Debug unit tests in executable 'Rust_game'",
-            "cargo": {
-                "args": [
-                    "test",
-                    "--no-run",
-                    "--bin=Rust_game",
-                    "--package=Rust_game"
-                ],
-                "filter": {
-                    "name": "Rust_game",
-                    "kind": "bin"
-                }
-            },
-            "args": [],
-            "cwd": "${workspaceFolder}"
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "build",
+            "sourceFileMap" : {
+                "C:\\Users\\Bård Sigurd Møller\\.rustup\\toolchains\\stable-i686-pc-windows-msvc\\lib\\rustlib\\src\\rust" : "c:\\rustc\\73528e339aae0f17a15ffa49a8ac608f50c6cf14"
+            }
         }
     ]
 }
